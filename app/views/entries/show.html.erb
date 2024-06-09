@@ -1,5 +1,10 @@
 <p style="color: green"><%= notice %></p>
-
+<p>
+  <strong>Title:</strong>
+  <% @categories.each do |category| %>
+    <%= category.name %>
+  <% end %>
+</p>
 <%= render @entry %>
 
 <div>

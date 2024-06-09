@@ -4,10 +4,12 @@ class EntriesController < ApplicationController
   # GET /entries or /entries.json
   def index
     @entries = Entry.all
+    @categories = @entries.map(&:category)
   end
 
   # GET /entries/1 or /entries/1.json
   def show
+    @categories = [@entry.category]
   end
 
   # GET /entries/new
@@ -65,6 +67,6 @@ class EntriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def entry_params
-      params.require(:entry).permit(:title, :date, :body)
+      params.require(:entry).permit(:title, :date, :body, :category_id)
     end
 end

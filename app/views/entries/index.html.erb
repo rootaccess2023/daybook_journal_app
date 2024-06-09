@@ -3,6 +3,12 @@
 <h1>Entries</h1>
 
 <div id="entries">
+  <p>
+    <strong>Category:</strong>
+    <% @categories.each do |category| %>
+      <%= category.name %>
+    <% end %>
+  </p>
   <% @entries.each do |entry| %>
     <%= render entry %>
     <p>
