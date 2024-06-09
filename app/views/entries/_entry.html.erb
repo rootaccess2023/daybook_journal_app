@@ -1,5 +1,11 @@
 <div id="<%= dom_id entry %>">
   <p>
+    <strong>Category:</strong>
+    <% @categories.each do |category| %>
+      <%= category.name %>
+    <% end %>
+  </p>
+  <p>
     <strong>Title:</strong>
     <%= entry.title %>
   </p>
@@ -7,7 +13,6 @@
     <strong>Date:</strong>
     <%= entry.date %>
   </p>
-
   <p>
     <strong>Body:</strong>
     <%= entry.body %>
