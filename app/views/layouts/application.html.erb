@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <%= form_with url: logout_path, method: :delete, local: true do %>
+        <%= submit_tag "Log Out", class: "logout-button" %>
+      <% end %>
+    <% else %>
+      <%= link_to "Log In", login_path %> |
+      <%= link_to "Sign Up", signup_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
