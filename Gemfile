@@ -71,3 +71,6 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.20'
 
 # Tailwindcss
 gem "tailwindcss-rails", "~> 2.6"
+
+# Font Awesome
+gem "font-awesome-rails"
